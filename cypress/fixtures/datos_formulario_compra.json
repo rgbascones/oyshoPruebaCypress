@@ -1,0 +1,11 @@
+{
+  "nombre": "Rodrigo",
+  "apellidos":"Garcia Bascones",
+  "email": "rgb@bascones.dev",
+  "telefono":"123456789",
+  "direccion":"C. de Basauri",
+  "direccion2":"6",
+  "cp": "28023",
+  "ciudad":"Madrid",
+  "provincia":"Madrid"
+}
