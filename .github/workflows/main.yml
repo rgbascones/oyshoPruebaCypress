@@ -1,0 +1,15 @@
+name: workflow cypress
+on:
+  schedule:
+  - cron: "0 0 * * 1-5"
+jobs:
+  ejecutar_pruebas_diarias:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cypress run
+        uses: Cypress-io/github-action@v2
+        with:
+          command: npm run test
+          wait-on: https://www.oysho.com/
+          
+
