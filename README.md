@@ -35,7 +35,7 @@ En este proyecto de cypress hay tres partes diferenciadas
 
 - Validación del titulo y la navegación:
 Esta es la parte obligatoria de la entrevista técnica, en esta caso se prueba a conectar a la página , validar el texto del título y comprobar mediante un scroll que se puede navegar por la página.
-- Validaciones extras
+- Validaciones extras:
 Validaremos que el buscador esté visible, tambien comprobaremos que el menú lateral emergente se despliega y que todas sus opciones tienen el texto correcto.
 - Caso de prueba funcional real:
 Simularemos un caso real de navegación y de selección de producto, añadiremos el producto a la cesta e iniciaremos el proceso de compra, rellenaremos el formulario con los datos del cliente y seleccionaremos el metodo de envio, acabaremos el caso de prueba en el momento previo a acceder a la pasarela de pago.
