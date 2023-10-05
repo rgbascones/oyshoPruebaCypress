@@ -1,7 +1,7 @@
 name: workflow cypress
 on:
   schedule:
-  - cron: "0 0 * * 1-5"
+  - cron: "0 0 * * 1-7"
 jobs:
   ejecutar_pruebas_diarias:
     runs-on: ubuntu-latest
