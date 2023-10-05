@@ -12,12 +12,12 @@ describe('validaciones extra', () => {
         cy.get('#onetrust-accept-btn-handler').click();
         cy.get('[data-testid="cancel-store"]').click();
     });
-//Con estos dos test comprobaremos que el titulo es correcto y que la pagina es navegable haciendo un scroll hasta el footer
-    it('Buscador visible',()=>{
+    //Con estos dos test comprobaremos que el titulo es correcto y que la pagina es navegable haciendo un scroll hasta el footer
+    it('Buscador visible', () => {
         // Verificamos que el buscador esta visible
         cy.get('#buscador').should('be.visible')
     })
-    it('Menú lateral se despliega y tiene los textos correctos',()=>{
+    it('Menú lateral se despliega y tiene los textos correctos', () => {
         //introduzco logs para facilitar el seguimiento en caso de error
         // Verificamos que el menú se despliega
         cy.log('Desplegar menú');
@@ -33,6 +33,5 @@ describe('validaciones extra', () => {
         cy.get('#header > div > oy-sidebar > div > div.sidebar__content-wrapper.sidebar--left.sidebar__content-wrapper--active > div > oy-header-categories-menu > div > nav > ul > li:nth-child(7) > oy-category-menu-item > a > span').should('have.text', ' VER POR CALIDAD ');
         cy.get('#header > div > oy-sidebar > div > div.sidebar__content-wrapper.sidebar--left.sidebar__content-wrapper--active > div > oy-header-categories-menu > div > nav > ul > li:nth-child(9) > oy-category-menu-item > a > span').should('have.text', ' OYSHO TRAINING ');
         cy.get('#header > div > oy-sidebar > div > div.sidebar__content-wrapper.sidebar--left.sidebar__content-wrapper--active > div > oy-header-categories-menu > div > nav > oy-category-menu-info > div > oy-collapse > div > button > div > p').should('have.text', ' Info ');
-
     })
 });
