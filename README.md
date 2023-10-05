@@ -33,11 +33,11 @@ En este proyecto de cypress hay tres partes diferenciadas
 
 
 
-- Validación del titulo y la navegación:
+- ### Escenario 1: Validación del titulo y la navegación
 Esta es la parte obligatoria de la entrevista técnica, en esta caso se prueba a conectar a la página , validar el texto del título y comprobar mediante un scroll que se puede navegar por la página.
-- Validaciones extras:
+- ### Escenario 2: Validaciones extras
 Validaremos que el buscador esté visible, tambien comprobaremos que el menú lateral emergente se despliega y que todas sus opciones tienen el texto correcto.
-- Caso de prueba funcional real:
+- ### Escenario 3 : Caso de prueba funcional real:
 Simularemos un caso real de navegación y de selección de producto, añadiremos el producto a la cesta e iniciaremos el proceso de compra, rellenaremos el formulario con los datos del cliente y seleccionaremos el metodo de envio, acabaremos el caso de prueba en el momento previo a acceder a la pasarela de pago.
 
 ## OBSERVACIONES
@@ -49,6 +49,26 @@ los datos tales como las url y los datos del cliente se extraen de sus respectiv
 https://github.com/rgbascones/oyshoPruebaCypress
 
 Existen 2 ramas en el proyecto, la rama Master y la rama bascones que es en la que se han realizado los scripts para despues fusionarla con la rama master, simulando un caso real de uso en el que se trabaja en una rama diferente para que los commits no afecten directamente a la rama master.
+
+## GITHUB ACTIONS
+Se añade el siguiente workflow en el archivo main.yml con la intención de ejecutar los test de cypress todos los dias a las 12 de la noche 
+
+```javascript
+name: workflow cypress
+on:
+  schedule:
+  - cron: "0 0 * * 1-7"
+jobs:
+  ejecutar_pruebas_diarias:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cypress run
+        uses: Cypress-io/github-action@v2
+        with:
+          command: npm run test
+          wait-on: https://www.oysho.com/
+          
+```
 ## COMANDOS POR CONSOLA
 
 
